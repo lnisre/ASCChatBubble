@@ -22,7 +22,7 @@
 {
     ASCTextBlock *block = [[ASCTextBlock alloc] initWithAligment:YES];
     [block setWidth:TextBlockPadding type:NSTextBlockAbsoluteValueType forLayer:NSTextBlockPadding edge:0];
-    [block setWidth:TextBlockWith type:NSTextBlockAbsoluteValueType forLayer:NSTextBlockWidth];
+    
     [block setContentWidth:TextBlockWithPercent type:NSTextBlockPercentageValueType];
     
     NSMutableParagraphStyle *paragraph = [[NSMutableParagraphStyle defaultParagraphStyle] mutableCopy];
@@ -38,7 +38,7 @@
 {
     ASCTextBlock *block = [[ASCTextBlock alloc] initWithAligment:NO];
     [block setWidth:TextBlockPadding type:NSTextBlockAbsoluteValueType forLayer:NSTextBlockPadding edge:0];
-    [block setWidth:TextBlockWith type:NSTextBlockAbsoluteValueType forLayer:NSTextBlockWidth];
+    
     [block setContentWidth:TextBlockWithPercent type:NSTextBlockPercentageValueType];
     
     NSMutableParagraphStyle *paragraph = [[NSMutableParagraphStyle defaultParagraphStyle] mutableCopy];

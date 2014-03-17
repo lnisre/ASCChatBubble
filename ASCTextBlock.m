@@ -54,7 +54,7 @@
     
     NSString* string = [[[[textContainer textView] textStorage] attributedSubstringFromRange:charRange] string];
     NSLayoutManager* layout = [[NSLayoutManager alloc] init];
-    NSTextContainer* container = [[NSTextContainer alloc] init];
+    NSTextContainer* container = [[NSTextContainer alloc] initWithContainerSize:rect.size];
     NSTextStorage* storage = [[NSTextStorage alloc] initWithString:string attributes:@{NSFontAttributeName : [NSFont systemFontOfSize:13]}];
     [layout addTextContainer:container];
     [storage addLayoutManager:layout];
@@ -66,9 +66,12 @@
         delta = rect.size.width - temp.size.width;
     }
     result = NSMakeRect(startingPoint.x + delta , startingPoint.y, temp.size.width, temp.size.height);
+    
     self.backGround = result;
-    result.origin.x = self.bLeft ? result.origin.x+HeadIndent : result.origin.x-HeadIndent;
+    
+    result.origin.x = self.bLeft ? result.origin.x+HeadIndent : result.origin.x+HeadIndent;
     result.origin.y += TopIndent;
+    result.size.width -= 2*HeadIndent;
     return result;
 }
 

@@ -36,7 +36,7 @@
 -(IBAction)addBubble:(id)sender
 {
     NSMutableArray *arr = [[NSMutableArray alloc] init];
-    [arr addObject:[NSArray arrayWithObjects:kASCMessageText, @"hellohellohellohellohellohellohellohello", nil]];
+    [arr addObject:[NSArray arrayWithObjects:kASCMessageText, @"hellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohello", nil]];
     
     ASCMessage *msg = [[ASCMessage alloc] initWithMsgId:0 sender:@"他" context:arr FromSelf:NO];
     NSAttributedString* string = [msg attributeStringWithOwner:self.txtView];
