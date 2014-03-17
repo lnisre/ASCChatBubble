@@ -11,7 +11,7 @@
 
 #define LeftInlineBorder 1.0f
 #define TextBlockPadding 8.0f
-#define TextBlockWithPercent 20.0f
+#define TextBlockWithPercent 100.0f
 #define TextBlockWith 80.0f
 
 #define SendColor [NSColor colorWithCalibratedRed:225 green:0 blue:0 alpha:1]
@@ -28,7 +28,6 @@
     NSMutableParagraphStyle *paragraph = [[NSMutableParagraphStyle defaultParagraphStyle] mutableCopy];
     [paragraph setTextBlocks:[NSArray arrayWithObjects:block, nil]];
     [paragraph setAlignment:NSLeftTextAlignment];
-    [paragraph setLineBreakMode:NSLineBreakByWordWrapping];
     
     NSMutableDictionary *result = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
                                    paragraph, NSParagraphStyleAttributeName, nil];
@@ -45,7 +44,6 @@
     NSMutableParagraphStyle *paragraph = [[NSMutableParagraphStyle defaultParagraphStyle] mutableCopy];
     [paragraph setTextBlocks:[NSArray arrayWithObjects:block, nil]];
     [paragraph setAlignment:NSRightTextAlignment];
-    [paragraph setLineBreakMode:NSLineBreakByWordWrapping];
     
     NSMutableDictionary *result = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
                                    paragraph, NSParagraphStyleAttributeName, nil];

@@ -36,8 +36,7 @@
 -(IBAction)addBubble:(id)sender
 {
     NSMutableArray *arr = [[NSMutableArray alloc] init];
-    [arr addObject:[NSArray arrayWithObjects:kASCMessageText, @"hello", nil]];
-//    [arr addObject:[NSArray arrayWithObjects:kASCMessageImage, @"/Users/wenlonggao/Desktop/ASCChatBubble/ASCChatBubble/images/bubbleSomeone.png", nil]];
+    [arr addObject:[NSArray arrayWithObjects:kASCMessageText, @"hellohellohellohellohellohellohellohello", nil]];
     
     ASCMessage *msg = [[ASCMessage alloc] initWithMsgId:0 sender:@"他" context:arr FromSelf:NO];
     NSAttributedString* string = [msg attributeStringWithOwner:self.txtView];
@@ -49,7 +48,7 @@
 -(IBAction)addBuble2:(id)sender
 {
     NSMutableArray *arr = [[NSMutableArray alloc] init];
-    [arr addObject:[NSArray arrayWithObjects:kASCMessageText, @"hello", nil]];
+    [arr addObject:[NSArray arrayWithObjects:kASCMessageText, @"hellohellohellohellohellohello", nil]];
     [arr addObject:[NSArray arrayWithObjects:kASCMessageImage, @"/Users/wenlonggao/Desktop/typingMine.png", nil]];
     
     ASCMessage *msg = [[ASCMessage alloc] initWithMsgId:0 sender:@"我" context:arr FromSelf:YES];
